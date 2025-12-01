@@ -1,0 +1,137 @@
+/* Font Utama */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f4ff; /* Latar belakang lembut */
+}
+
+/* =================================== */
+/* STYLING UNTUK INDEX.HTML (LOGIN) */
+/* =================================== */
+.split-screen {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.left-panel {
+    flex: 1;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); /* Biru Tua Elegan */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    color: white;
+    text-align: center;
+}
+
+.right-panel {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background-color: white;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+}
+
+.choice-card {
+    border: 1px solid #ddd;
+    padding: 30px 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.admin-card-login { border-left: 5px solid #0d6efd; }
+.user-card-login { border-left: 5px solid #198754; }
+
+.admin-card-login:hover { box-shadow: 0 4px 10px rgba(13, 110, 253, 0.2); transform: translateY(-2px); }
+.user-card-login:hover { box-shadow: 0 4px 10px rgba(25, 135, 84, 0.2); transform: translateY(-2px); }
+
+/* Media Query untuk Responsif (Mobile View) */
+@media (max-width: 768px) {
+    .split-screen {
+        flex-direction: column;
+    }
+    .left-panel {
+        height: 200px;
+        flex: none;
+    }
+}
+
+/* ======================================= */
+/* 2. STYLING UNTUK ADMIN.HTML & USER.HTML */
+/* ======================================= */
+
+/* Body Background Khas */
+.admin-body { background-color: #e6f0ff; } 
+.user-body { background-color: #f0fff0; } 
+
+/* Navigasi Tab Khas */
+.nav-admin .nav-link.active {
+    background-color: #0d6efd !important;
+    color: white !important;
+    border-color: #0d6efd !important;
+}
+.nav-user .nav-link.active {
+    background-color: #198754 !important;
+    color: white !important;
+    border-color: #198754 !important;
+}
+
+/* Card Dashboard Statistik */
+.dashboard-card, .admin-card {
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    min-height: 120px;
+    transition: transform 0.2s;
+}
+
+.dashboard-card:hover, .admin-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Warna Card */
+.card-total { background-color: #0d6efd; } /* Biru */
+.card-peminjam { background-color: #28a745; } /* Hijau */
+.card-menunggu { background-color: #ffc107; } /* Kuning */
+.card-statistik { background-color: #6f42c1; } /* Ungu */
+.card-tersedia { background-color: #198754; } /* Hijau Tua */
+.card-dipinjam { background-color: #0d6efd; } /* Biru */
+
+
+/* Katalog Buku Card */
+.book-card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s;
+    overflow: hidden;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.book-cover {
+    height: 250px;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* Tabel Admin Cover */
+.table-cover { 
+    width: 50px; 
+    height: 75px; 
+    object-fit: cover; 
+    border-radius: 4px;
+}
